@@ -1,0 +1,100 @@
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+    <!-- Encabezado -->
+    <div class="login-header">
+      <div class="login-logo">🚀</div>
+      <h1 class="login-title">TechApp</h1>
+      <p class="login-subtitle">Inicia sesión para continuar</p>
+    </div>
+
+    <!-- Formulario -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form" novalidate>
+
+      <!-- ── CAMPO EMAIL ── -->
+      <div class="form-group">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <div class="input-wrapper">
+          <span class="input-icon">✉️</span>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            class="form-input"
+            [class.input-error]="email?.invalid && email?.touched"
+            placeholder="admin@miapp.com"
+            autocomplete="email"
+          />
+        </div>
+
+        <!-- Mensajes de error del campo email -->
+        <div class="error-messages" *ngIf="email?.invalid && email?.touched">
+          <span class="error-msg" *ngIf="email?.errors?.['required']">
+            ⚠️ El correo electrónico es obligatorio.
+          </span>
+          <span class="error-msg" *ngIf="email?.errors?.['email']">
+            ⚠️ Formato de correo inválido (ej: usuario@dominio.com).
+          </span>
+        </div>
+      </div>
+
+      <!-- ── CAMPO CONTRASEÑA ── -->
+      <div class="form-group">
+        <label for="password" class="form-label">Contraseña</label>
+        <div class="input-wrapper">
+          <span class="input-icon">🔒</span>
+          <input
+            id="password"
+            [type]="mostrarPassword ? 'text' : 'password'"
+            formControlName="password"
+            class="form-input"
+            [class.input-error]="password?.invalid && password?.touched"
+            placeholder="Mínimo 6 caracteres"
+            autocomplete="current-password"
+          />
+          <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePassword()"
+            [title]="mostrarPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'"
+          >
+            {{ mostrarPassword ? '🙈' : '👁️' }}
+          </button>
+        </div>
+
+        <!-- Mensajes de error del campo contraseña -->
+        <div class="error-messages" *ngIf="password?.invalid && password?.touched">
+          <span class="error-msg" *ngIf="password?.errors?.['required']">
+            ⚠️ La contraseña es obligatoria.
+          </span>
+          <span class="error-msg" *ngIf="password?.errors?.['minlength']">
+            ⚠️ La contraseña debe tener al menos 6 caracteres.
+          </span>
+        </div>
+      </div>
+
+      <!-- ── ERROR DE CREDENCIALES INCORRECTAS ── -->
+      <div class="credentials-error" *ngIf="errorCredenciales">
+        <span>❌ {{ errorCredenciales }}</span>
+      </div>
+
+      <!-- ── BOTÓN SUBMIT ── -->
+      <button
+        type="submit"
+        id="btn-login"
+        class="btn-login"
+        [class.btn-disabled]="loginForm.invalid"
+      >
+        Iniciar Sesión
+      </button>
+
+      <!-- Credenciales de prueba (solo para demo) -->
+      <div class="demo-hint">
+        <p>🔑 <strong>Demo:</strong> admin&#64;miapp.com / 123456</p>
+      </div>
+
+    </form>
+  </div>
+
+</div>
