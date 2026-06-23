@@ -2,7 +2,7 @@
    LOGIN PAGE - Diseño ultra premium con fondo animado
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 
 /* ── FONDO ANIMADO PRINCIPAL ── */
 .login-wrapper {
@@ -32,8 +32,13 @@
 }
 
 @keyframes bgPulse {
-  0%   { opacity: 1; }
-  100% { opacity: 0.75; }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
 }
 
 /* Malla de puntos decorativa */
@@ -48,8 +53,13 @@
 }
 
 @keyframes gridMove {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(38px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(38px);
+  }
 }
 
 /* ── ORBES FLOTANTES ── */
@@ -103,9 +113,19 @@
 }
 
 @keyframes orbFloat {
-  0%, 100% { transform: translateY(0) scale(1); }
-  33%       { transform: translateY(-25px) scale(1.04); }
-  66%       { transform: translateY(15px) scale(0.97); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  33% {
+    transform: translateY(-25px) scale(1.04);
+  }
+
+  66% {
+    transform: translateY(15px) scale(0.97);
+  }
 }
 
 /* ── PARTÍCULAS FLOTANTES ── */
@@ -124,20 +144,94 @@
   animation: particleRise linear infinite;
 }
 
-.particle:nth-child(1)  { width: 4px; height: 4px; left: 10%; animation-duration: 12s; animation-delay: 0s; }
-.particle:nth-child(2)  { width: 3px; height: 3px; left: 20%; animation-duration: 15s; animation-delay: -3s; background: rgba(96, 165, 250, 0.6); }
-.particle:nth-child(3)  { width: 5px; height: 5px; left: 35%; animation-duration: 10s; animation-delay: -6s; }
-.particle:nth-child(4)  { width: 2px; height: 2px; left: 50%; animation-duration: 18s; animation-delay: -2s; background: rgba(52, 211, 153, 0.5); }
-.particle:nth-child(5)  { width: 4px; height: 4px; left: 65%; animation-duration: 14s; animation-delay: -8s; }
-.particle:nth-child(6)  { width: 3px; height: 3px; left: 75%; animation-duration: 11s; animation-delay: -4s; background: rgba(248, 113, 113, 0.4); }
-.particle:nth-child(7)  { width: 6px; height: 6px; left: 85%; animation-duration: 16s; animation-delay: -1s; }
-.particle:nth-child(8)  { width: 2px; height: 2px; left: 90%; animation-duration: 13s; animation-delay: -9s; background: rgba(96, 165, 250, 0.5); }
+.particle:nth-child(1) {
+  width: 4px;
+  height: 4px;
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  width: 3px;
+  height: 3px;
+  left: 20%;
+  animation-duration: 15s;
+  animation-delay: -3s;
+  background: rgba(96, 165, 250, 0.6);
+}
+
+.particle:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  left: 35%;
+  animation-duration: 10s;
+  animation-delay: -6s;
+}
+
+.particle:nth-child(4) {
+  width: 2px;
+  height: 2px;
+  left: 50%;
+  animation-duration: 18s;
+  animation-delay: -2s;
+  background: rgba(52, 211, 153, 0.5);
+}
+
+.particle:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  left: 65%;
+  animation-duration: 14s;
+  animation-delay: -8s;
+}
+
+.particle:nth-child(6) {
+  width: 3px;
+  height: 3px;
+  left: 75%;
+  animation-duration: 11s;
+  animation-delay: -4s;
+  background: rgba(248, 113, 113, 0.4);
+}
+
+.particle:nth-child(7) {
+  width: 6px;
+  height: 6px;
+  left: 85%;
+  animation-duration: 16s;
+  animation-delay: -1s;
+}
+
+.particle:nth-child(8) {
+  width: 2px;
+  height: 2px;
+  left: 90%;
+  animation-duration: 13s;
+  animation-delay: -9s;
+  background: rgba(96, 165, 250, 0.5);
+}
 
 @keyframes particleRise {
-  0%   { bottom: -10px; opacity: 0; transform: translateX(0); }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.7; }
-  100% { bottom: 110%; opacity: 0; transform: translateX(30px); }
+  0% {
+    bottom: -10px;
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.7;
+  }
+
+  100% {
+    bottom: 110%;
+    opacity: 0;
+    transform: translateX(30px);
+  }
 }
 
 /* ── TARJETA GLASSMORPHISM PREMIUM ── */
@@ -187,6 +281,7 @@
     opacity: 0;
     transform: translateY(50px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -208,8 +303,17 @@
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1) rotate(0deg);   filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.5)); }
-  50%       { transform: scale(1.1) rotate(8deg); filter: drop-shadow(0 0 35px rgba(167, 139, 250, 1)); }
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.5));
+  }
+
+  50% {
+    transform: scale(1.1) rotate(8deg);
+    filter: drop-shadow(0 0 35px rgba(167, 139, 250, 1));
+  }
 }
 
 .login-title {
@@ -342,8 +446,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── ERROR DE CREDENCIALES ── */
@@ -360,9 +471,19 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25%       { transform: translateX(-6px); }
-  75%       { transform: translateX(6px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  75% {
+    transform: translateX(6px);
+  }
 }
 
 /* ── BOTÓN DE LOGIN ── */
@@ -396,7 +517,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
   transition: left 0.55s ease;
 }
 
