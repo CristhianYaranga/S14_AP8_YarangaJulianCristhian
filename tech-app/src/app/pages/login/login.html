@@ -1,5 +1,24 @@
 <div class="login-wrapper">
 
+  <!-- Orbes decorativos del fondo -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+
+  <!-- Partículas flotantes -->
+  <div class="particles">
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+  </div>
+
+
   <div class="login-card">
 
     <!-- Encabezado -->
@@ -8,6 +27,8 @@
       <h1 class="login-title">TechApp</h1>
       <p class="login-subtitle">Inicia sesión para continuar</p>
     </div>
+
+    <div class="login-divider"></div>
 
     <!-- Formulario -->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form" novalidate>

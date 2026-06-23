@@ -4,59 +4,37 @@
     <h1 class="navbar-logo">🚀 TechApp</h1>
     <ul class="nav-menu">
       <li class="nav-item">
-        <a
-          routerLink="/home"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="nav-link"
-        >
+        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
           Inicio
         </a>
       </li>
       <li class="nav-item">
-        <a
-          routerLink="/productos"
-          routerLinkActive="active"
-          class="nav-link"
-        >
+        <a routerLink="/productos" routerLinkActive="active" class="nav-link">
           Productos
         </a>
       </li>
       <li class="nav-item">
-        <a
-          routerLink="/servicios"
-          routerLinkActive="active"
-          class="nav-link"
-        >
+        <a routerLink="/servicios" routerLinkActive="active" class="nav-link">
           Servicios
         </a>
       </li>
       <li class="nav-item">
-        <a
-          routerLink="/contacto"
-          routerLinkActive="active"
-          class="nav-link"
-        >
+        <a routerLink="/contacto" routerLinkActive="active" class="nav-link">
           Contacto
         </a>
       </li>
 
       <!-- ── BOTÓN CERRAR SESIÓN ── -->
       <li class="nav-item" *ngIf="estaLogueado">
-        <button
-          id="btn-logout"
-          class="btn-logout"
-          (click)="logout()"
-          title="Cerrar sesión"
-        >
-          🚪 Cerrar Sesión
+        <button id="btn-logout" class="btn-logout" (click)="logout()" title="Cerrar sesión">
+          Cerrar Sesión
         </button>
       </li>
     </ul>
   </div>
 </nav>
 
-<main class="main-content">
+<main [class]="mostrarNavbar ? 'main-content' : 'main-full'">
   <router-outlet></router-outlet>
 </main>
 
